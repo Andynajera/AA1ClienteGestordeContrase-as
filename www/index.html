@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 
-  <script src="main.js" type="module"></script>
+  <script src="funcions/main.js" type="module"></script>
 
 
 
@@ -20,26 +20,26 @@
   crossorigin="anonymous">
   defer
 </script>
+
+
 </head>
 <body>
 
 
-
-
-<div class="container p-5">
+<div class="container p-4">
   <div class="row my-3">
       <div class="col">
-              <a href="./add.new.html"  class="btn btn-primary" >Add Category</a>
+              <a href="category.html"  class="btn btn-primary" >Add Category</a>
             
-              <a href="./Sites.html" type="button" class="btn btn-primary" >Add Site</a>
+              <a href="Sites.html" type="button" class="btn btn-primary" >Add Site</a>
             </div>
       </div>
   
 <div class="row">
   <div class="col-2">
-  <div class="card">
+    <div class="card">
           <div class="card-header">
-            Categories
+            Categories 
           </div>
           <ul class="list-group list-group-flush" id="removeCategories">
 
@@ -51,7 +51,9 @@
         </div>               
       </div>  
   <div class="col">
+    
   <table class="table table-bordered">
+    
       <thead >
 
         <tr>
@@ -63,29 +65,9 @@
         </tr>
         
       </thead>
-      <tbody>
-        
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td >
-              <button>abrir url</button>
-              <button class="remove-btn" data-site-id="1">eliminar</button>
-              <button>editar</button>
-          </td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>
-              <button class="remove-btn" data-site-id="2">eliminar</button>
-              <button>accion2</button>
-          </td>
-        </tr>
-        
-
+      <tbody id="sitesList">
+        <tbody id="categoryList"></tbody>
+       
 
       </tbody>
       

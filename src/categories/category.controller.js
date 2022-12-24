@@ -25,6 +25,7 @@ async function getSite(req, res) {
 }
 
 async function addNewSite(req, res) {
+  console.log( "hola mundo");
   let result = await models.Site.build(req.body)
   result.categoryId = req.params.id
   await result.save()
@@ -64,7 +65,8 @@ async function updateSite(req, res) {
   site.user = req.body.user
   site.password = req.body.password
   site.description = req.body.description
-
+  //Borrar si eso 
+  site.categoryId = req.body.categoryId
   await models.Site.update(site, { where: { id: req.params.id }})
   res.sendStatus(200)
 }
@@ -75,7 +77,7 @@ function init(app) {
   app.get('/sites',listSites)
   app.get('/sites/:id', getSite)
 
-  app.post('/categories/:id', addNewSite)
+  app.post('/sites', addNewSite)
   app.post('/categories', addNewCategory)
 
   app.delete('/sites/:id', delSite)

@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Create Site</title>
-  <script src="Sites.js" type="module"></script>
-
+  
+  <script src="funcions/Sites.js" type=""></script>
 
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,35 +23,61 @@
 </head>
 
 <body>
-    <form>
+    <form name="dataS">
     
         <div class="row mb-3">
             <label for="name" class="col-sm-2 col-form-label">Name</label>
-            <div class="col-sm-10">
-              <input type="name"  id="name">
-            </div>
+              <div class="col-sm-10">
+                <input name="name" id="name" type="text"/>
+              </div>
+        </div>
+
+          <div class="row mb-3">
+              <label for="description" class="col-sm-2 col-form-label">Description</label>
+                <div class="col-sm-10">
+                  <input name="description" id="description" type="text"/>
+                </div>
           </div>
-        <div class="row mb-3">
+
+            
             <label for="user" class="col-sm-2 col-form-label">User</label>
-            <div class="col-sm-10">
-              <input type="user"  id="user">
+                <div class="col-sm-10">
+                  <input name="user" id="user" type="text"/>
+                </div>
+            
+            
+           
+            <div>
+              <label for="url" class="col-sm-2 col-form-label">url</label>
+                <div class="col-sm-10">
+                  <input name="url" placeholder="https://example.com" id="url" type="text"/>
+                </div>
             </div>
+
+            
+            <label for="password" class="col-sm-2 col-form-label">Password</label>
+            <div class="col-sm-10">
+              <input name="password" id="password" type="text"/>
+              <br /><br />
+              <center><button type="button" class="btn btn-primary" onClick="getPassword()"/>Crear Contraseñas</button></center>
+            </div>
+         
+
+            <div>
+              <label for="id" class="col-sm-2 col-form-label">ID</label>
+                <div class="col-sm-10">
+                  <input name="id"  id="categoryId" type="number"/>
+                </div>
+            </div>
+          </form>
           </div>
 
         </div>
-        <div class="row mb-3">
-          <label for="inputPassword3" class="col-sm-2 col-form-label">Password </label>
-          
-          <div class="col-sm-10">
-            <input type="password" class="form-control" id="password">
-            <!--Contraseña segura regenerar-->
-            <br /><br />
-            <center><button type="button" class="btn btn-primary" onClick="getPassword()"/>Crear Contraseñas</button></center>
-          </div>
+        
+         
         </div>
-        <div class="col-sm-10">
-            <input type="url" class="input" placeholder="https://example.com" id="URL" required>
-          </div>
+
+
         <div class="row mb-3">
           <div class="col-sm-10 offset-sm-2">
             <div class="form-check">
@@ -62,13 +88,18 @@
             </div>
           </div>
         </div>
-
-        <a class="btn btn-primary" style="background-color:blue ;" href="index.html" role="button">Save</a>
-        <a class="btn btn-primary" style="background-color:red ;" href="index.html" role="button">Cancel</a>     
+        
+        <a class="btn btn-primary" style="background-color:red ;" href="index.html" role="button">Atras</a>    
+        <button a href="index.html" id="addButtonS" style="background-color:blue ;"a class="btn btn-primary" >Save</button>
+ 
      </form>
 
-     
-</body>
-<script src="Sites.js"></script>
 
+</body>
+
+
+
+
+
+</body>
 </html>

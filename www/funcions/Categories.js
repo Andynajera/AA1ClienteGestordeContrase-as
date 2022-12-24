@@ -1,6 +1,9 @@
+
+
+//Añadir categoria
 window.onload = function(){
     console.log("onload")
-    document.getElementById("addButton").onclick =function(){
+    document.getElementById("addBotones").onclick =function(){
        console.log(`category: ${document.forms.data.name.value}`) 
        fetch("http://localhost:3000/categories",{
         method: 'POST',
@@ -14,4 +17,5 @@ window.onload = function(){
        return false
     }
     
-}
+  };
+ 
